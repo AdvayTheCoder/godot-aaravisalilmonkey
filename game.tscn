@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dg4n63crayfdk"]
+
+[ext_resource type="PackedScene" uid="uid://dmvwiw0m5pmyt" path="res://advay.tscn" id="1_e2o6t"]
+[ext_resource type="Script" uid="uid://qtqggkn6jc38" path="res://advay.gd" id="2_feb5d"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e2o6t"]
+
+[node name="Game" type="Node2D" unique_id=60051723]
+
+[node name="advay" parent="." unique_id=1670689847 instance=ExtResource("1_e2o6t")]
+script = ExtResource("2_feb5d")
+
+[node name="Camera2D" type="Camera2D" parent="advay" unique_id=249007451]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1169170238]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1810055646]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1038626582]
+position = Vector2(0, 20)
+shape = SubResource("WorldBoundaryShape2D_e2o6t")
